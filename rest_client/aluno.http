@@ -1,5 +1,7 @@
 
-@baseUrl = http://localhost:3001
+
+# @baseUrl = http://localhost:3001
+@baseUrl = http://34.95.224.209
 @route = /alunos
 @createdAt = {{$datetime iso8601}}
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
@@ -11,7 +13,7 @@ GET {{baseUrl}}{{route}}
 
 # read. requer token
 ###
-GET {{baseUrl}}{{route}}/4
+GET {{baseUrl}}{{route}}/11
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDMxNjg4LCJleHAiOjE2NTAwMzY0ODh9.LGiWB4ZUrn0pDHE3MBzSIeI7XdBxijpZeVye9pJgYIY
 ###
 
@@ -21,9 +23,9 @@ POST {{baseUrl}}{{route}}
 Content-Type: application/json
 
 {
-  "nome": "Ana",
-  "snome": "ana..",
-  "email": "ana6@gmail.com",
+  "nome": "Ana-api",
+  "snome": "ana...-api",
+  "email": "ana-api@gmail.com",
   "nascimento": "{{$datetime '2022-04-08 12:15:00'}}",
   "peso": 94.7,
   "altura": 1.87

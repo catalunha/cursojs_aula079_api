@@ -1,5 +1,7 @@
 
 @baseUrl = http://localhost:3001
+# @baseUrl = http://34.95.224.209
+
 @route = /fotos
 @createdAt = {{$datetime iso8601}}
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
@@ -17,7 +19,7 @@ Content-Type: multipart/form-data; boundary=boundary
 --boundary
 Content-Disposition: form-data; name="aluno_id"
 
-4
+12
 --boundary
 Content-Disposition: form-data; name="foto"; filename="foto.png"
 Content-Type: image/png
