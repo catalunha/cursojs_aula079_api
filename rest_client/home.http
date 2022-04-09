@@ -1,0 +1,9 @@
+
+@baseUrl = http://localhost:3001
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
+
+###
+
+GET {{baseUrl}}
+
+###

@@ -1,0 +1,37 @@
+
+@baseUrl = http://localhost:3001
+@route = /users
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
+
+GET {{baseUrl}}{{route}}
+
+###
+
+GET {{baseUrl}}/users/6
+
+###
+
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "nome": "Carla",
+  "email": "carla@gmail.com",
+  "password": "123456"
+}
+
+###
+PUT {{baseUrl}}/users/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5Mzc2NzE1LCJleHAiOjE2NDk5ODE1MTV9.6IZuE_ZESE6qNzf5_qYHsq2qN423GnOC-jfXhWVTH4Y
+
+{
+  "nome": "Ana",
+  "email": "ana@gmail.com"
+}
+
+###
+DELETE {{baseUrl}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJiaWFAZ21haWwuY29tIiwiaWF0IjoxNjQ5Mzc1ODQ1LCJleHAiOjE2NDk5ODA2NDV9.EVtKG1mIGl3Gr9jaoBbn99h91cUfc4bRv4tXLte9BYU
+
+###

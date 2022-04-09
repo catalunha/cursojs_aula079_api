@@ -1,0 +1,43 @@
+
+@baseUrl = http://localhost:3001
+@route = /fotos
+@createdAt = {{$datetime iso8601}}
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
+# index
+###
+GET {{baseUrl}}{{route}}
+###
+
+# create
+###
+POST {{baseUrl}}{{route}}
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="aluno_id"
+
+4
+--boundary
+Content-Disposition: form-data; name="foto"; filename="foto.png"
+Content-Type: image/png
+
+< ./foto.png
+--boundary--
+###
+
+
+# update
+###
+PATCH  {{baseUrl}}{{route}}/3
+Content-Type: application/json
+
+{
+  "peso": 84.7
+}
+###
+
+# delete
+###
+DELETE {{baseUrl}}{{route}}/9
+###

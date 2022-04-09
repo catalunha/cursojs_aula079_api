@@ -1,0 +1,47 @@
+
+@baseUrl = http://localhost:3001
+@route = /alunos
+@createdAt = {{$datetime iso8601}}
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDQyNDA4LCJleHAiOjE2NTAwNDcyMDh9.uhr-XMFyVjTWIgBVU3U57ENKtHhhKoLHQOJtf1jrUOg
+
+# list
+###
+GET {{baseUrl}}{{route}}
+###
+
+# read. requer token
+###
+GET {{baseUrl}}{{route}}/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiaWF0IjoxNjQ5NDMxNjg4LCJleHAiOjE2NTAwMzY0ODh9.LGiWB4ZUrn0pDHE3MBzSIeI7XdBxijpZeVye9pJgYIY
+###
+
+# create
+###
+POST {{baseUrl}}{{route}}
+Content-Type: application/json
+
+{
+  "nome": "Ana",
+  "snome": "ana..",
+  "email": "ana6@gmail.com",
+  "nascimento": "{{$datetime '2022-04-08 12:15:00'}}",
+  "peso": 94.7,
+  "altura": 1.87
+}
+###
+
+
+# update
+###
+PATCH  {{baseUrl}}{{route}}/3
+Content-Type: application/json
+
+{
+  "peso": 84.7
+}
+###
+
+# delete
+###
+DELETE {{baseUrl}}{{route}}/9
+###

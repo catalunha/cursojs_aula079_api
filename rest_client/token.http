@@ -1,0 +1,13 @@
+
+@baseUrl = http://localhost:3001
+
+###
+
+POST {{baseUrl}}/tokens/
+Content-Type: application/json
+
+{
+  "email": "ana@gmail.com",
+  "password":"123456"
+}
+###
